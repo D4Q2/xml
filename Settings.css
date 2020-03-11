@@ -3,6 +3,12 @@ body
     background-color: lightblue;
   }
 
+  .background
+  {
+    background-color: lightblue;
+    color: lightblue;
+  }
+
 
   .menu 
   { 
