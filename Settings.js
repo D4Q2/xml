@@ -1,4 +1,13 @@
-// A function to take us to the donate page
+  function setBackgroundColor(color)
+  {
+    var settings = Settings.xml;
+    parser = new DOMParser();
+    var settingsParsed = parser.parseFromString(settings,"text/xml");
+    settingsParsed.getElementsByTagName("backgroundColorBody")[0].childNodes[0].nodeValue = color;
+  }
+
+
+   // A function to take us to the donate page
    function donatePage()
    {
      // Code to take us to the donate page
