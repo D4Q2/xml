@@ -1,0 +1,115 @@
+body
+  {
+    background-color: lightblue;
+  }
+
+
+  .menu 
+  { 
+    grid-area: menu;
+    background-color: coral;
+    margin-left: -10px;
+    margin-right: -9px;
+    margin-top: -8px;
+  }
+
+  .openMenu
+  {
+    width: 75px;
+    height: 30px;
+    float: right;
+    color: #010101; /* Text color */
+    background-color: transparent; /* Remove background color */
+    border: 2px solid #010101; /* Border thickness, line style, and color */
+    border-radius: 20px; /* Adds curve to border corners */
+    text-transform: uppercase; /* Make letters uppercase */
+    font-size: 12pt;
+  }
+
+  .menuButton
+  {
+    width: 75px;   /* how many pixels wide */
+    height: 30px;  /* how many pixels tall */
+    float: right;  /* Puts it to the right of other elements */
+    color: #010101; /* Text color */
+    background-color: transparent; /* Remove background color */
+    border: 2px solid #010101; /* Border thickness, line style, and color */
+    border-radius: 20px; /* Adds curve to border corners */
+    text-transform: uppercase; /* Make letters uppercase */
+    font-size: 8pt; /* font size */
+  }
+
+  .menuButton:active
+  {
+    width: 100px;   /* how many pixels wide */
+    height: 35px;  /* how many pixels tall */
+    float: right;  /* Puts it to the right of other elements */
+    color: #010101; /* Text color */
+    background-color: transparent; /* Remove background color */
+    border: 2px solid #010101; /* Border thickness, line style, and color */
+    border-radius: 20px; /* Adds curve to border corners */
+    text-transform: uppercase; /* Make letters uppercase */
+    font-size: 10pt; /* font size */
+  }
+
+  .title
+  {  
+    grid-area: title;
+    font-weight: bold;
+    text-align: center; 
+    font-size: 30pt;
+    background-color: coral;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .subtitle 
+  { 
+    grid-area: subtitle;
+    text-align: center;
+    font-size: 20pt;
+    padding: 20px 0;
+    background-color: coral;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  .image 
+  { 
+    grid-area: image; 
+    text-align: center;
+    font-size: 12pt;
+    padding: 20px 0;
+  }
+
+  .aboutHeader
+  {  
+    grid-area: aboutHeader; 
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    padding: 20px 0;
+  }
+
+  .aboutText
+  { 
+    grid-area: aboutText; 
+    text-align: center;
+    font-size: 12pt;
+    padding: 20px 0;
+  }
+
+
+
+  .grid-container 
+  {
+    display: grid;
+    grid-template-areas:
+      'menu menu menu menu menu menu'
+      'title title title title title title'
+      'subtitle subtitle subtitle subtitle subtitle subtitle'
+      'image image image . . .'
+      'image image image aboutHeader aboutHeader aboutHeader'
+      'image image image aboutText aboutText aboutText'
+      'image image image . . .';
+  }
