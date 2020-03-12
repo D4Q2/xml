@@ -1,9 +1,19 @@
-  function setBackgroundColor(color)
-  {
-    var settings = Settings.xml;
-    parser = new DOMParser();
-    var settingsParsed = parser.parseFromString(settings,"text/xml");
-    settingsParsed.getElementsByTagName("backgroundColorBody")[0].childNodes[0].nodeValue = color;
+ function changeColor(color)
+ {
+     // Make a variable for our xmlHttpRequest which we send out to get our data
+     var req = new XMLHttpRequest(); 
+     // Use request to open the URL
+     req.open('GET', 'Settings.xml', false);
+     // Send it
+     req.send(null);
+     // If the request status is 200, then it is ready
+     if(req.status == 200)
+     {
+       //Make our response text a variable and parse it
+       parser = new DOMParser();
+       xmlDoc = parser.parseFromString(req.responseText,"text/xml");
+       xmlDoc.getElementsByTagName("backgroundcolorbody")[0].childNodes[0].nodeValue = color;
+     }
   }
 
 
