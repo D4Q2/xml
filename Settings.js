@@ -87,6 +87,7 @@
 
    //Declare variables
    var bodyChange;
+   var defaultColor = "#ffffff";
    // Add event listeners
    window.addEventListener("load", startupBody, false);
    // Set some things up for the body color changing
@@ -103,4 +104,4 @@
      // Our document body   the style background color   and change it to the target value
      document.body.style.background = event.target.value;
      document.getElementsByTagName("bodybackgroundcolor")[0].childNodes[0].nodeValue = event.target.value;
-  }
+   }
