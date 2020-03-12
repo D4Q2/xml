@@ -82,3 +82,25 @@
        menu.appendChild(menuOpener);
      }
    }
+
+   //Change color of background
+
+   //Declare variables
+   var bodyChange;
+   // Add event listeners
+   window.addEventListener("load", startupBody, false);
+   // Set some things up for the body color changing
+   function startupBody() 
+   {
+     bodyChange = document.querySelector("#bodyChanger");
+     bodyChange.value = defaultColor;
+     bodyChange.addEventListener("input", updateBody, false);
+     bodyChange.select();
+   }
+   // update body background color
+   function updateBody(event) 
+   {
+     // Our document body   the style background color   and change it to the target value
+     document.body.style.background = event.target.value;
+     document.getElementsByTagName("bodybackgroundcolor")[0].childNodes[0].nodeValue = event.target.value;
+  }
