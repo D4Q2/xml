@@ -103,5 +103,5 @@
    {
      // Our document body   the style background color   and change it to the target value
      document.body.style.background = event.target.value;
-     document.getElementsByTagName("bodybackgroundcolor")[0].childNodes[0].nodeValue = event.target.value;
+     document.getElementsByTagName("backgroundcolorbody")[0].childNodes[0].nodeValue = event.target.value;
    }
