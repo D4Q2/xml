@@ -3,7 +3,7 @@
      // Make a variable for our xmlHttpRequest which we send out to get our data
      var req = new XMLHttpRequest(); 
      // Use request to open the URL
-     req.open('GET', 'Settings.xml', false);
+     req.open('GET', 'Settings.xml', true);
      // Send it
      req.send(null);
      // If the request status is 200, then it is ready
