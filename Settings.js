@@ -86,22 +86,22 @@
    //Change color of background
 
    //Declare variables
-   var bodyChange;
+   var headerHomeChange;
    var defaultColor = "#ffffff";
    // Add event listeners
-   window.addEventListener("load", startupBody, false);
+   window.addEventListener("load", startupHeaderHome, false);
    // Set some things up for the body color changing
-   function startupBody() 
+   function startupHeaderHome() 
    {
-     bodyChange = document.querySelector("#bodyChanger");
-     bodyChange.value = defaultColor;
-     bodyChange.addEventListener("input", updateBody, false);
-     bodyChange.select();
+     headerHome = document.querySelector("#headerHome");
+     headerHome.value = defaultColor;
+     headerHome.addEventListener("input", updateHeaderHome, false);
+     headerHome.select();
    }
    // update body background color
-   function updateBody(event) 
+   function updateHeaderHome(event) 
    {
      // Our document body   the style background color   and change it to the target value
-     document.body.style.background = event.target.value;
+     document.getElementById("headerHome").style.background = event.target.value;
      document.getElementsByTagName("bodybackgroundcolor")[0].childNodes[0].nodeValue = event.target.value;
    }
